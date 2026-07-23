@@ -1,0 +1,123 @@
+body {
+  min-width: 900px;
+  min-height: 100vh;
+  color: var(--color-neutral-950);
+  background: var(--color-neutral-100);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 6px;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+p {
+  color: var(--color-neutral-700);
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns:
+    var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  display: flex;
+  width: var(--sidebar-width);
+  flex-direction: column;
+  padding: 24px 16px;
+  color: var(--color-white);
+  background: var(--color-primary-900);
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px 30px;
+}
+
+.sidebar__brand strong,
+.sidebar__brand span {
+  display: block;
+}
+
+.sidebar__brand span {
+  margin-top: 3px;
+  color: rgb(255 255 255 / 60%);
+  font-size: 12px;
+}
+
+.sidebar__logo {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 13px;
+  color: var(--color-primary-900);
+  background: var(--color-accent-500);
+}
+
+.sidebar__navigation {
+  display: grid;
+  gap: 7px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px;
+  border-radius: 10px;
+  color: rgb(255 255 255 / 72%);
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.sidebar-link:hover {
+  color: var(--color-white);
+  background: rgb(255 255 255 / 7%);
+}
+
+.sidebar-link--active {
+  color: var(--color-white);
+  background: var(--color-primary-700);
+}
+
+.sidebar__footer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding: 12px;
+  color: rgb(255 255 255 / 66%);
+  font-size: 13px;
+}
+
+.connection-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #56ca83;
+  box-shadow:
+    0 0 0 4px rgb(86 202 131 / 14%);
+}
+
+.main-content {
+  grid-column: 2;
+  padding: 34px 38px;
+}
