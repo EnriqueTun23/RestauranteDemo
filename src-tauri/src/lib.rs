@@ -3,8 +3,6 @@ mod database;
 mod error;
 mod models;
 mod repositories;
-mod server;
-mod services;
 mod state;
 
 use crate::{
